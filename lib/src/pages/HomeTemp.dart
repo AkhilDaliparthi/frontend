@@ -1,15 +1,13 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:frontend/globals.dart';
+import 'package:frontend/constant.dart';
 import 'package:frontend/src/api/UserApis.dart';
-import 'package:frontend/src/components/SignIn.dart';
-import 'package:frontend/src/components/Stocks.dart';
+import 'package:frontend/src/pages/SignIn.dart';
 import 'package:frontend/src/model/UserInfo.dart';
 
-class Home extends StatefulWidget {
+class HomeTemp extends StatefulWidget {
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
@@ -17,7 +15,7 @@ class Home extends StatefulWidget {
         child: SizedBox(
           width: 400,
           child: Card(
-            child: Home(),
+            child: HomeTemp(),
           ),
         ),
       ),
@@ -26,11 +24,11 @@ class Home extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return new HomeState();
+    return new HomeTempState();
   }
 }
 
-class HomeState extends State<Home> {
+class HomeTempState extends State<HomeTemp> {
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +43,6 @@ class HomeState extends State<Home> {
             new RaisedButton(
               child: new Text("Stocks"),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Stocks()));
               }
             ),
           ],
@@ -59,7 +56,7 @@ class HomeState extends State<Home> {
           if (userInfo.token == token) {
             user = userInfo;
             print("Routing to Home Page");
-            return new Home();
+            return new HomeTemp();
           } else {
             print("Routing to SignIn Page");
             return new SignIn();

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/src/components/Home.dart';
-import 'package:frontend/src/components/SignIn.dart';
-import 'package:frontend/src/components/SignUp.dart';
-import 'package:frontend/src/components/Stocks.dart';
+import 'package:frontend/src/pages/Home.dart';
+import 'package:frontend/src/pages/SignIn.dart';
+import 'package:frontend/src/pages/SignUp.dart';
+import 'package:frontend/src/pages/About.dart';
+import 'package:url_strategy/url_strategy.dart';
 
-void main() => runApp(Frontend());
+void main() {
+  setPathUrlStrategy();
+  runApp(Frontend());
+}
 
 class Frontend extends StatelessWidget {
   @override
@@ -16,7 +20,7 @@ class Frontend extends StatelessWidget {
         '/signIn':(context) => SignIn(),
         '/signUp' : (context) => SignUp(),
         '/home' : (context) => Home(),
-        '/stocks' : (context) => Stocks()
+        '/about' : (context) => About()
       },
     );
   }

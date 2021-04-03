@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/globals.dart';
+import 'package:frontend/constant.dart';
 import 'package:frontend/src/api/UserApis.dart';
-import 'package:frontend/src/components/Home.dart';
-import 'package:frontend/src/components/SignUp.dart';
+import 'package:frontend/src/pages/SignUp.dart';
 import 'package:frontend/src/model/UserInfo.dart';
 
 class SignIn extends StatelessWidget {
