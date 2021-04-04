@@ -61,19 +61,61 @@ class AboutState extends State<About> with TickerProviderStateMixin {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-                    buildBoldTextContainer(screenWidth,
-                        VISION_MISSION_VALUES_STR, 100, 10, 20, 10),
-                    buildTextContainer(screenWidth, VISION_MISSION_VALUES_TEXT,
-                        100, 10, 20, 10)
+                    buildBoldTextContainer(
+                        screenWidth, VISION_MISSION_VALUES_STR, 100, 10, 0, 10),
+                    buildTextContainer(
+                        screenWidth, VISION_MISSION_VALUES_TEXT, 100, 10, 0, 10)
                   ],
                 ),
                 Spacer(),
                 Column(
                   children: <Widget>[
                     buildBoldTextContainer(
-                        screenWidth, PHILOSOPHY_STR, 20, 10, 100, 10),
+                        screenWidth, PHILOSOPHY_STR, 0, 10, 100, 10),
                     buildTextContainer(
-                        screenWidth, PHILOSOPHY_TEXT, 20, 10, 100, 10)
+                        screenWidth, PHILOSOPHY_TEXT, 0, 10, 100, 10)
+                  ],
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    buildBoldTextContainer(
+                        screenWidth, EXPERTISE_STR, 100, 10, 0, 10),
+                    buildTextContainer(
+                        screenWidth, EXPERTISE_TEXT, 100, 10, 0, 10)
+                  ],
+                ),
+                Spacer(),
+                Column(
+                  children: <Widget>[
+                    buildBoldTextContainer(
+                        screenWidth, EXPERIENCE_STR, 0, 10, 100, 10),
+                    buildTextContainer(
+                        screenWidth, EXPERIENCE_TEXT, 0, 10, 100, 10)
+                  ],
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    buildBoldTextContainer(
+                        screenWidth, EXPERTISE_STR, 100, 10, 0, 10),
+                    buildTextContainer(
+                        screenWidth, EXPERTISE_TEXT, 100, 10, 0, 10)
+                  ],
+                ),
+                Spacer(),
+                Column(
+                  children: <Widget>[
+                    buildBoldTextContainer(
+                        screenWidth, EXPERIENCE_STR, 0, 10, 100, 10),
+                    buildTextContainer(
+                        screenWidth, EXPERIENCE_TEXT, 0, 10, 100, 10)
                   ],
                 )
               ],
@@ -95,7 +137,6 @@ class AboutState extends State<About> with TickerProviderStateMixin {
         width: screenWidth * 0.4,
         padding: EdgeInsets.fromLTRB(
             leftPadding, topPadding, rightPadding, bottomPadding),
-        alignment: Alignment.center,
         child: Text(txt,
             textAlign: TextAlign.justify,
             softWrap: true,
@@ -116,7 +157,6 @@ class AboutState extends State<About> with TickerProviderStateMixin {
         width: screenWidth * 0.4,
         padding: EdgeInsets.fromLTRB(
             leftPadding, topPadding, rightPadding, bottomPadding),
-        alignment: Alignment.center,
         child: Text(txt,
             textAlign: TextAlign.justify,
             softWrap: true,
