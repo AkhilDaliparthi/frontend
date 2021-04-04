@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/src/pages/About.dart';
 import 'package:frontend/src/pages/Home.dart';
 import 'package:frontend/src/pages/SignIn.dart';
 import 'package:frontend/src/pages/SignUp.dart';
-import 'package:frontend/src/pages/About.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
@@ -17,10 +17,10 @@ class Frontend extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => Home(),
-        '/signIn':(context) => SignIn(),
-        '/signUp' : (context) => SignUp(),
-        '/home' : (context) => Home(),
-        '/about' : (context) => About()
+        '/signIn': (context) => SignIn(),
+        '/signUp': (context) => SignUp(),
+        '/home': (context) => Home(),
+        '/about': (context) => About()
       },
     );
   }
